@@ -26,7 +26,11 @@
 </form>
 
 <div>
-    <p th:text="${guestbookEntries}"></p>
+    <div th:each="guestbookEntry : ${guestbookEntries}">
+        <b th:text="${guestbookEntry.name}"></b>
+        <i th:text="${guestbookEntry.timestamp}"></i>
+        <p th:text="${guestbookEntry.text}"></p>
+    </div>
 </div>
 </body>
 </html>

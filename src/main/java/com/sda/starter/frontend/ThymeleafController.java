@@ -21,7 +21,7 @@ public class ThymeleafController {
     public String index(Model model) {
         model.addAttribute("powitanie", "Siemanko! Jesteś " + (++licznik) + " odwiedzającym moją stronę!");
         model.addAttribute("guestbookForm", new GuestbookForm());
-        model.addAttribute("guestbookEntries", guestbookService.getTopGuestbookEntries().toString());
+        model.addAttribute("guestbookEntries", guestbookService.getTopGuestbookEntries());
         return "index";
     }
 
