@@ -7,5 +7,22 @@
 <body>
 <h1>Witam grupę JavaGDA31!</h1>
 <h3 th:text="${powitanie}"></h3>
+
+<h2>Księga gości:</h2>
+<form action="#" th:action="@{/}" method="post" th:object="${guestbookForm}">
+    <div>
+        <label>
+            Imię:
+            <input type="text" placeholder="Tu wpisz swoje imie" th:field="*{name}">
+        </label>
+    </div>
+    <div>
+        <label>
+            Treść:
+            <input type="text" placeholder="Tu wpisz treść wiadomości" th:field="*{entry}">
+        </label>
+    </div>
+    <button type="submit">Wpisz mnie!</button>
+</form>
 </body>
 </html>
